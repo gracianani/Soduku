@@ -1,7 +1,3 @@
-// Place all the styles related to the puzzle controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 
@@ -14,44 +10,44 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-  background: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline;
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
 h1, h2, h3, h4, h5, h6 {
-  clear: both;
-  font-weight: normal;
+	clear: both;
+	font-weight: normal;
 }
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
 blockquote {
-  quotes: none;
+	quotes: none;
 }
 blockquote:before, blockquote:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 del {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 /* tables still need 'cellspacing="0"' in the markup */
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 a img {
-  border: none;
+	border: none;
 }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
 
 /* `Clear Floated Elements
@@ -75,7 +71,7 @@ footer, header, hgroup, menu, nav, section {
   content: ".";    
   display: block;    
   height: 0;    
-  overflow: hidden; 
+  overflow: hidden;	
 }
 .clearfix:after {clear: both;}
 .clearfix {zoom: 1;} /* IE < 8 */
@@ -84,63 +80,63 @@ footer, header, hgroup, menu, nav, section {
 /* =Structure
 ----------------------------------------------- */
 html,body,#container,#header,#top-nav {
-  width:100%;
+	width:100%;
 }
 #container {
-  text-align:center;
+	text-align:center;
 }
 #main,#header {
-  width:1000px;
-  margin:0 auto;
+	width:1000px;
+	margin:0 auto;
 }
 #logo {
-  margin-top:-36px;
-  padding:10px 90px 0 0;
+	margin-top:-36px;
+	padding:10px 90px 0 0;
 }
 #menu {
-  margin-top:20px;
+	margin-top:20px;
 }
 #logo,#menu {
-  float:left;
-  display:inline;
+	float:left;
+	display:inline;
 }
 body {
-  background:url(../images/mainbg.jpg);
-  font-family:Georgia, "Times New Roman", Times, serif;
-  font-size:14px;
+	background:url(../images/mainbg.jpg);
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
 }
 a { color:#b62b21; text-decoration:none; }
 a:hover,a:focus,a:active {color:#006668;}
 
 #top-nav {
-  background:url(../images/topnavbg.png) repeat-x;
-  height:36px;
+	background:url(../images/topnavbg.png) repeat-x;
+	height:36px;
 }
 #subscribe {
-  padding:5px 20px;
-  float:right;
+	padding:5px 20px;
+	float:right;
 }
 #menu {
-  border-left:1px dashed #878787;
+	border-left:1px dashed #878787;
 }
 #menu li {
-  float:left;
-  display:inline;
+	float:left;
+	display:inline;
 }
 #menu-blog,#menu-contact,#menu-home,#menu-work {
-  display:block;
-  width:135px;
-  height:70px;
-  padding-top:15px;
-  border-right:1px dashed #878787;
-  
+	display:block;
+	width:135px;
+	height:70px;
+	padding-top:15px;
+	border-right:1px dashed #878787;
+	
 }
 #menu-blog span,#menu-contact span,#menu-home span,#menu-work span {
-  background:url(../images/menuicons.png) no-repeat left top;
-  display:block;
-  width:40px;
-  padding-top:40px;
-  margin:0 auto 10px;
+	background:url(../images/menuicons.png) no-repeat left top;
+	display:block;
+	width:40px;
+	padding-top:40px;
+	margin:0 auto 10px;
 }
 #menu-home:hover span,#menu-home:active span,#menu-home:focus span,#menu-home.current span {background-position:-160px top;}
 
@@ -154,69 +150,25 @@ a:hover,a:focus,a:active {color:#006668;}
 #menu-blog:hover span,#menu-blog:active span,#menu-blog:focus span,#menu-blog.current span {background-position:-280px top;}
 
 #soduku-description {
-  position:relative;
-  padding:80px 20px 20px 250px;
-  height:110px;
-  background:url(../images/dot.png) repeat-x left bottom;
-  text-align:left;
-  font-size:20px;
-  line-height:1.5em;
-  text-shadow:1px 1px 1px #FFF;
+	position:relative;
+	padding:80px 20px 20px 250px;
+	height:110px;
+	background:url(../images/dot.png) repeat-x left bottom;
+	text-align:left;
+	font-size:20px;
+	line-height:1.5em;
+	text-shadow:1px 1px 1px #FFF;
 }
 #soduku-description p{
-  position: relative;
-  z-index: 100;
+	position: relative;
+	z-index: 100;
 }
 #soduku-title {
-  background:url(../images/sodukutitle.png) no-repeat left top;
-  height:201px;
-  width:502px;
-  text-indent:-9999px;
-  position: absolute;
-  left:0;
-  top:0;
-}
-
-
-
-#avatar {
-  background-image: url('seemeloo-racoon.png');
-  width:300px;
-  height:300px;
-}
-
-#hint {
-  float:left;
-}
-#talks {
-  background-image: url('bubble_thought_s.gif');
-  width:200px;
-  height:100px;
-  font-family: 'Georgia';
-  font-size:12px;
-  line-height:18px;
-  padding-top: 50px;
-  text-align: center;
-}
-#puzzle {
-	
-  width: 600px;
-  margin : 20px 0px;
-  float: right;
-  table {
-    margin: 1em;
-    text-align:center;
-    float:left;
-    border:2px solid blue;
-    width: 120px;
-    height:120px;
-    td {
-      width : 30px;
-      height: 30px;
-      padding: 5px;
-      input {
-        width :30px;
-      }
-    }
-  }
+	background:url(../images/sodukutitle.png) no-repeat left top;
+	height:201px;
+	width:502px;
+	text-indent:-9999px;
+	position: absolute;
+	left:0;
+	top:0;
 }

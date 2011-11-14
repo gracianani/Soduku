@@ -3,3 +3,13 @@ db/*.sqlite3
 log/*.log
 tmp/
 .sass-cache/
+
+app/views/puzzle/.DS_Store
+
+app/views/.DS_Store
+
+app/.DS_Store
+
+.DS_Store
+
+.gitignore
