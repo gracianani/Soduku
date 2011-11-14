@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sudoku</title>
+		<link rel="stylesheet" type="text/css" media="all" href="stylesheets/uitest.css" />
+	</head>
+	<body>
 		<div id="container">
 			<div id="top-nav">
 				<div id="subscribe">
@@ -7,7 +14,7 @@
 			</div><!--#top-nav-->
 			<div id="header" class="clearfix">
 				<div id="logo">
-					<img src="../../images/logo.png" alt="Seemeloo" />
+					<img src="images/logo.png" alt="Seemeloo" />
 				</div><!--#logo-->
 				<ul id="menu">
 					<li><a id="menu-home" href="#"><span></span>Hello World!</a></li>
@@ -21,29 +28,8 @@
 					<h1 id="soduku-title">Sudoku</h1>
 					<p>Every Sudoku has a unique solution that can be reached logically. Enter numbers into the blank spaces so that each row, column and 3x3 box contains the numbers 1 to 9.</p>
 				</div>
-				
-				<div id="puzzle-container">
-					
-					<div id="puzzle">
-					<%9.times do |i| @j = i %>
-						<%= render :partial => 'puzzle/cell' %>	
-						<% if @j%3 == 2 %> 
-							<div style="clear:both"></div>
-						<% end %>
-					<%end%>
-					</div>
-					
-					<div id="hint">
-						<div id="talks">
-						</div>
-						<div id="avatar">
-						</div>
-					</div>
-					
-				</div><!--#puzzle-container>
+				<div id="puzzle"></div>
 			</div><!--#main-->
 		</div><!--#container-->
 	</body>
 </html>
-
-
