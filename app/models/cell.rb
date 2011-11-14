@@ -2,9 +2,7 @@ class Cell
   def initialize(values)
     raise Invalid, "Grid is the wrong size"+values.size().to_s unless values.length == 9
 
-    char_to_replace = values[rand(8)].to_s()
-    values = values.tr(char_to_replace,'.')
-    @values = values.split(//).shuffle().join()
+    @values = values
     @current_values = @values
   end
   
@@ -25,7 +23,9 @@ class Cell
   end
   
   def []= (index,new_value)
-    @current_values.split(//)[index] = new_value
+    a = @current_values.split(//)
+    a[index] = new_value.to_s
+    @current_values = a.join()
   end
   
   def include? (value)

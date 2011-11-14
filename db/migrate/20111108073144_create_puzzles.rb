@@ -1,8 +1,8 @@
 class CreatePuzzles < ActiveRecord::Migration
   def up
-    create_table :puzzles do |t|
-
-      t.timestamps
+    create_table :puzzle_cells do |t|
+      t.string :name
     end
   end
+  
 end

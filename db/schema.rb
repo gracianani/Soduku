@@ -12,6 +12,10 @@
 
 ActiveRecord::Schema.define(:version => 20111108073144) do
 
+  create_table "puzzle_cells", :force => true do |t|
+    t.string "name"
+  end
+
   create_table "puzzles", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
