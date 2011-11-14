@@ -1,0 +1,18 @@
+<h1>Puzzle</h1>
+<div id="puzzle">
+<%9.times do |i| @j = i %>
+	<%= render :partial => 'puzzle/cell' %>	
+	<% if @j%3 == 2 %> 
+		<div style="clear:both"></div>
+	<% end %>
+<%end%>
+</div>
+
+<div id="hint">
+	<div id="talks">
+	</div>
+	<div id="avatar">
+	</div>
+</div>
+
+

@@ -1,0 +1,311 @@
+info it worked if it ends with ok
+verbose cli [ 'node',
+verbose cli   '/usr/local/bin/npm',
+verbose cli   'install',
+verbose cli   '-g',
+verbose cli   'coffee-script' ]
+info using npm@1.0.103
+info using node@v0.4.8
+verbose config file /Users/rainy_star_2001/.npmrc
+verbose config file /usr/local/etc/npmrc
+verbose config file /usr/local/lib/node_modules/npm/npmrc
+verbose into /usr/local/lib [ 'coffee-script' ]
+verbose cache add coffee-script
+verbose cache add [ 'coffee-script', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'coffee-script',
+silly cache add: name, spec, args   [ 'coffee-script', null ] ]
+verbose parsed url { pathname: 'coffee-script', href: 'coffee-script' }
+info addNamed [ 'coffee-script', '' ]
+verbose addNamed [ null, '' ]
+verbose GET coffee-script
+verbose raw, before any munging coffee-script
+verbose url resolving [ 'http://registry.npmjs.org/', './coffee-script' ]
+verbose url resolved http://registry.npmjs.org/coffee-script
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"ERC15GU8LQ5PLB1IWBVNBOU5K"',
+silly get cb     date: 'Wed, 09 Nov 2011 07:01:18 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '12227' } ]
+verbose mkdir (expected) error ENOENT, No such file or directory '/Users/rainy_star_2001/.npm/coffee-script'
+verbose mkdir done: /Users/rainy_star_2001/.npm/coffee-script 755
+verbose GET coffee-script/1.1.3
+verbose raw, before any munging coffee-script/1.1.3
+verbose url resolving [ 'http://registry.npmjs.org/',
+verbose url resolving   './coffee-script/1.1.3' ]
+verbose url resolved http://registry.npmjs.org/coffee-script/1.1.3
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.1.0 (Erlang OTP/R14B04)',
+silly get cb     etag: '"ERC15GU8LQ5PLB1IWBVNBOU5K"',
+silly get cb     date: 'Wed, 09 Nov 2011 07:01:20 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '1025' } ]
+verbose mkdir (expected) error ENOENT, No such file or directory '/Users/rainy_star_2001/.npm/coffee-script/1.1.3'
+verbose mkdir done: /Users/rainy_star_2001/.npm/coffee-script/1.1.3 755
+verbose bin dist [ '0.4-ares1.7.4-ev4.4-openssl0.9.8l-v83.1.8.16-darwin-10.8.0',
+verbose bin dist   { shasum: '04cb82e59653fcad6ae6050900c81adf3af6d798',
+verbose bin dist     tarball: 'http://registry.npmjs.org/coffee-script/-/coffee-script-1.1.3.tgz' } ]
+verbose addRemoteTarball [ 'http://registry.npmjs.org/coffee-script/-/coffee-script-1.1.3.tgz',
+verbose addRemoteTarball   '04cb82e59653fcad6ae6050900c81adf3af6d798' ]
+verbose mkdir (expected) error ENOENT, No such file or directory '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264'
+verbose mkdir (expected) error ENOENT, No such file or directory '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866'
+verbose mkdir done: /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866 755
+info fetch http://registry.npmjs.org/coffee-script/-/coffee-script-1.1.3.tgz
+verbose fetch to /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/tmp.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 30720
+info shasum 04cb82e59653fcad6ae6050900c81adf3af6d798
+info shasum /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/tmp.tgz
+verbose mkdir (expected) error ENOENT, No such file or directory '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents'
+verbose mkdir (expected) error ENOENT, No such file or directory '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm'
+verbose mkdir done: /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly spawning [ 'tar',
+silly spawning   [ '-zmvxpf',
+silly spawning     '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/tmp.tgz',
+silly spawning     '-o' ],
+silly spawning   '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm' ]
+silly tar err x package/.npmignore
+silly tar err x package/LICENSE
+silly tar err x package/npm-install-45965.sh
+silly tar err x package/package.json
+silly tar err x package/Rakefile
+silly tar err x package/README
+silly tar err x package/bin/cake
+silly tar err x package/bin/coffee
+silly tar err x package/extras/jsl.conf
+silly tar err x package/lib/coffee-script/browser.js
+silly tar err x package/lib/coffee-script/cake.js
+silly tar err x package/lib/coffee-script/coffee-script.js
+silly tar err x package/lib/coffee-script/command.js
+silly tar err x package/lib/coffee-script/grammar.js
+silly tar err x package/lib/coffee-script/helpers.js
+silly tar err x package/lib/coffee-script/index.js
+silly tar err x package/lib/coffee-script/lexer.js
+silly tar err x package/lib/coffee-script/nodes.js
+silly tar err x package/lib/coffee-script/optparse.js
+silly tar err x package/lib/coffee-script/parser.js
+silly tar err x package/lib/coffee-script/repl.js
+silly tar err x package/lib/coffee-script/rewriter.js
+silly tar err x package/lib/coffee-script/scope.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/.npmignore
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/LICENSE
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/npm-install-45965.sh
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/package.json
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/Rakefile
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/README
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/bin
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/bin/cake
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/bin/coffee
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/extras
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/extras/jsl.conf
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/browser.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/cake.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/coffee-script.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/command.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/grammar.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/helpers.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/index.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/lexer.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/nodes.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/optparse.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/parser.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/repl.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/rewriter.js
+silly asyncMap in gTP /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package/lib/coffee-script/scope.js
+verbose gunzed /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package
+verbose rm'ed /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/package
+verbose renamed [ '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/___package.npm/package',
+verbose renamed   '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/package' ]
+silly testEngine { name: 'coffee-script',
+silly testEngine   description: 'Unfancy JavaScript',
+silly testEngine   keywords: [ 'javascript', 'language', 'coffeescript', 'compiler' ],
+silly testEngine   author: { name: 'Jeremy Ashkenas' },
+silly testEngine   version: '1.1.3',
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'MIT',
+silly testEngine        url: 'http://github.com/jashkenas/coffee-script/raw/master/LICENSE' } ],
+silly testEngine   engines: { node: '>=0.4.0' },
+silly testEngine   directories: { lib: './lib/coffee-script' },
+silly testEngine   main: './lib/coffee-script/coffee-script',
+silly testEngine   bin: { coffee: './bin/coffee', cake: './bin/cake' },
+silly testEngine   homepage: 'http://coffeescript.org',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/jashkenas/coffee-script.git' },
+silly testEngine   devDependencies: { 'uglify-js': '1.0.6', jison: '0.2.11' },
+silly testEngine   _id: 'coffee-script@1.1.3',
+silly testEngine   dependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.4.8',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   path: '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/package' }
+verbose caching /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/package/package.json
+verbose loadDefaults coffee-script@1.1.3
+verbose tarball contents [ 'package' ]
+verbose from cache /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/package/package.json
+verbose pack /var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents/package /Users/rainy_star_2001/.npm/coffee-script/1.1.3/package.tgz
+verbose mkdir'ed /Users/rainy_star_2001/.npm/coffee-script/1.1.3
+verbose tar about to write tar and gzip it.
+silly tar args [ '-czvf', '-', '-T', '-' ]
+silly spawning [ 'tar',
+silly spawning   [ '-czvf', '-', '-T', '-' ],
+silly spawning   '/var/folders/oy/oyPUSXFFH-0PiaG8rFVsWE+++TI/-Tmp-/npm-1320822081264/1320822081264-0.8527606080751866/contents' ]
+verbose mkdir (expected) error ENOENT, No such file or directory '/Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm'
+verbose mkdir done: /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /Users/rainy_star_2001/.npm/coffee-script/1.1.3/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly spawning [ 'tar',
+silly spawning   [ '-zmvxpf',
+silly spawning     '/Users/rainy_star_2001/.npm/coffee-script/1.1.3/package.tgz',
+silly spawning     '-o' ],
+silly spawning   '/Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm' ]
+silly tar err x package/.npmignore
+silly tar err x package/LICENSE
+silly tar err x package/npm-install-45965.sh
+silly tar err x package/package.json
+silly tar err x package/Rakefile
+silly tar err x package/README
+silly tar err x package/bin/cake
+silly tar err x package/bin/coffee
+silly tar err x package/extras/jsl.conf
+silly tar err x package/lib/coffee-script/browser.js
+silly tar err x package/lib/coffee-script/cake.js
+silly tar err x package/lib/coffee-script/coffee-script.js
+silly tar err x package/lib/coffee-script/command.js
+silly tar err x package/lib/coffee-script/grammar.js
+silly tar err x package/lib/coffee-script/helpers.js
+silly tar err x package/lib/coffee-script/index.js
+silly tar err x package/lib/coffee-script/lexer.js
+silly tar err x package/lib/coffee-script/nodes.js
+silly tar err x package/lib/coffee-script/optparse.js
+silly tar err x package/lib/coffee-script/parser.js
+silly tar err x package/lib/coffee-script/repl.js
+silly tar err x package/lib/coffee-script/rewriter.js
+silly tar err x package/lib/coffee-script/scope.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/.npmignore
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/LICENSE
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/npm-install-45965.sh
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/package.json
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/Rakefile
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/README
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/bin
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/bin/cake
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/bin/coffee
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/extras
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/extras/jsl.conf
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/browser.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/cake.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/coffee-script.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/command.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/grammar.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/helpers.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/index.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/lexer.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/nodes.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/optparse.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/parser.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/repl.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/rewriter.js
+silly asyncMap in gTP /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package/lib/coffee-script/scope.js
+verbose gunzed /Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package
+verbose rm'ed /Users/rainy_star_2001/.npm/coffee-script/1.1.3/package
+verbose renamed [ '/Users/rainy_star_2001/.npm/coffee-script/1.1.3/___package.npm/package',
+verbose renamed   '/Users/rainy_star_2001/.npm/coffee-script/1.1.3/package' ]
+silly testEngine { name: 'coffee-script',
+silly testEngine   description: 'Unfancy JavaScript',
+silly testEngine   keywords: [ 'javascript', 'language', 'coffeescript', 'compiler' ],
+silly testEngine   author: { name: 'Jeremy Ashkenas' },
+silly testEngine   version: '1.1.3',
+silly testEngine   licenses: 
+silly testEngine    [ { type: 'MIT',
+silly testEngine        url: 'http://github.com/jashkenas/coffee-script/raw/master/LICENSE' } ],
+silly testEngine   engines: { node: '>=0.4.0' },
+silly testEngine   directories: { lib: './lib/coffee-script' },
+silly testEngine   main: './lib/coffee-script/coffee-script',
+silly testEngine   bin: { coffee: './bin/coffee', cake: './bin/cake' },
+silly testEngine   homepage: 'http://coffeescript.org',
+silly testEngine   repository: 
+silly testEngine    { type: 'git',
+silly testEngine      url: 'git://github.com/jashkenas/coffee-script.git' },
+silly testEngine   devDependencies: { 'uglify-js': '1.0.6', jison: '0.2.11' },
+silly testEngine   _id: 'coffee-script@1.1.3',
+silly testEngine   dependencies: {},
+silly testEngine   _engineSupported: true,
+silly testEngine   _npmVersion: '1.0.103',
+silly testEngine   _nodeVersion: 'v0.4.8',
+silly testEngine   _defaultsLoaded: true,
+silly testEngine   dist: { shasum: '582058610ad66f6d01f5d91ba0e9416222b40cac' } }
+verbose caching /Users/rainy_star_2001/.npm/coffee-script/1.1.3/package/package.json
+verbose loadDefaults coffee-script@1.1.3
+silly updated sha bytes 40960
+silly updated sha bytes 30720
+info shasum 582058610ad66f6d01f5d91ba0e9416222b40cac
+info shasum /Users/rainy_star_2001/.npm/coffee-script/1.1.3/package.tgz
+verbose from cache /Users/rainy_star_2001/.npm/coffee-script/1.1.3/package/package.json
+verbose chmod /Users/rainy_star_2001/.npm/coffee-script/1.1.3/package.tgz 644
+verbose chown [ '/Users/rainy_star_2001/.npm/coffee-script/1.1.3/package.tgz',
+verbose chown   501,
+verbose chown   20 ]
+silly resolved [ { name: 'coffee-script',
+silly resolved     description: 'Unfancy JavaScript',
+silly resolved     keywords: [ 'javascript', 'language', 'coffeescript', 'compiler' ],
+silly resolved     author: { name: 'Jeremy Ashkenas' },
+silly resolved     version: '1.1.3',
+silly resolved     licenses: 
+silly resolved      [ { type: 'MIT',
+silly resolved          url: 'http://github.com/jashkenas/coffee-script/raw/master/LICENSE' } ],
+silly resolved     engines: { node: '>=0.4.0' },
+silly resolved     directories: { lib: './lib/coffee-script' },
+silly resolved     main: './lib/coffee-script/coffee-script',
+silly resolved     bin: { coffee: './bin/coffee', cake: './bin/cake' },
+silly resolved     homepage: 'http://coffeescript.org',
+silly resolved     repository: 
+silly resolved      { type: 'git',
+silly resolved        url: 'git://github.com/jashkenas/coffee-script.git' },
+silly resolved     devDependencies: { 'uglify-js': '1.0.6', jison: '0.2.11' },
+silly resolved     _id: 'coffee-script@1.1.3',
+silly resolved     dependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.0.103',
+silly resolved     _nodeVersion: 'v0.4.8',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '582058610ad66f6d01f5d91ba0e9416222b40cac' } } ]
+info into /usr/local/lib coffee-script@1.1.3
+info installOne coffee-script@1.1.3
+info unbuild /usr/local/lib/node_modules/coffee-script
+verbose from cache /Users/rainy_star_2001/.npm/coffee-script/1.1.3/package/package.json
+verbose mkdir (expected) error ENOENT, No such file or directory '/usr/local/lib/node_modules/___coffee-script.npm'
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/coffee-script
+ERR! Could not create /usr/local/lib/node_modules/___coffee-script.npm
+ERR! error installing coffee-script@1.1.3 Error: EACCES, Permission denied '/usr/local/lib/node_modules/___coffee-script.npm'
+info unbuild /usr/local/lib/node_modules/coffee-script
+verbose installOne cb coffee-script@1.1.3
+ERR! Error: EACCES, Permission denied '/usr/local/lib/node_modules/___coffee-script.npm'
+ERR! Report this *entire* log at:
+ERR!     <http://github.com/isaacs/npm/issues>
+ERR! or email it to:
+ERR!     <npm-@googlegroups.com>
+ERR! 
+ERR! System Darwin 10.8.0
+ERR! command "node" "/usr/local/bin/npm" "install" "-g" "coffee-script"
+ERR! cwd /Users/rainy_star_2001/Documents/Aptana Studio 3 Workspace/Soduku
+ERR! node -v v0.4.8
+ERR! npm -v 1.0.103
+ERR! path /usr/local/lib/node_modules/___coffee-script.npm
+ERR! code EACCES
+verbose exit [ 1, true ]

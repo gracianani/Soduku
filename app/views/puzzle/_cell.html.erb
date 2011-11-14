@@ -1,0 +1,30 @@
+
+<table>
+	<tr>
+	<% 3.times do |i| %>
+		<%if @puzzle[@j,i] == '.'%>
+			<td><input type="text"></input></td>
+		<% else %>
+			<td><%= @puzzle[@j,i] %></td>
+		<% end %>
+	<%end%>
+	</tr>
+	<tr>
+	<% 3.times do |i| %>
+		<%if @puzzle[@j,i+3] == '.'%>
+			<td><input type="text"></input></td>
+		<% else %>
+			<td><%= @puzzle[@j,i+3] %></td>
+		<% end %>
+	<%end%>
+	</tr>
+	<tr>
+	<% 3.times do |i| %>
+		<%if @puzzle[@j,i+6] == '.'%>
+			<td><input type="text"></input></td>
+		<% else %>
+			<td><%= @puzzle[@j,i+6] %></td>
+		<% end %>
+	<%end%>
+	</tr>
+</table>
