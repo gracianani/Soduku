@@ -26,6 +26,7 @@ class PuzzleController < ApplicationController
  
     respond_to do |format|
       format.json {render:json => result.to_json}
+      put 'abc'
     end
   end
 
