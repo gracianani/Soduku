@@ -1,19 +1,49 @@
 
-<h1>Puzzle</h1>
-<div id="puzzle">
-<%9.times do |i| @j = i %>
-	<%= render :partial => 'puzzle/cell' %>	
-	<% if @j%3 == 2 %> 
-		<div style="clear:both"></div>
-	<% end %>
-<%end%>
-</div>
 
-<div id="hint">
-	<div id="talks">
-	</div>
-	<div id="avatar">
-	</div>
-</div>
+<div id="container">
+	<div id="top-nav">
+		<div id="subscribe">
+			<input id="subscribe-ipt" />
+			<a id="subscribe-link" href="#">Subscribe</a>
+		</div>
+	</div><!--#top-nav-->
+	<div id="header" class="clearfix">
+		<div id="logo">
+			<img src="../../images/logo.png" alt="Seemeloo" />
+		</div><!--#logo-->
+		<ul id="menu">
+			<li><a id="menu-home" href="#"><span></span>Hello World!</a></li>
+			<li><a id="menu-work" class="current" href="#"><span></span>Work</a></li>
+			<li><a id="menu-contact" href="#"><span></span>Contact</a></li>
+			<li><a id="menu-blog" href="#"><span></span>Blog</a></li>
+		</ul><!--#menu-->
+	</div><!--#header-->
+	<div id="main">
+		<div id="soduku-description">
+			<h1 id="soduku-title">Sudoku</h1>
+			<p>Every Sudoku has a unique solution that can be reached logically. Enter numbers into the blank spaces so that each row, column and 3x3 box contains the numbers 1 to 9.</p>
+		</div>
+		
+		<div id="puzzle-container">
+			
+			<div id="puzzle">
+			<%9.times do |i| @j = i %>
+				<%= render :partial => 'puzzle/cell' %>	
+				<% if @j%3 == 2 %> 
+					<div style="clear:both"></div>
+				<% end %>
+			<%end%>
+			</div>
+			
+			<div id="hint">
+				<div id="talks">
+				</div>
+				<div id="avatar">
+				</div>
+			</div>
+			
+		</div><!--#puzzle-container>
+	</div><!--#main-->
+</div><!--#container-->
 
 
