@@ -28,7 +28,7 @@
 			
 			<div id="puzzle">
 			<%9.times do |i| @j = i %>
-				<%= render :partial => 'puzzle/cell' %>	
+				<%= render :partial => 'puzzle/cell'%>	
 				<% if @j%3 == 2 %> 
 					<div style="clear:both"></div>
 				<% end %>

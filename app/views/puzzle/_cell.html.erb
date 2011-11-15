@@ -1,5 +1,5 @@
 
-<table>
+<table class=<%="cells".concat(@j.to_s)%>>
 	<% 9.times do |i| %>
 	<% if i%3 == 0 %><tr><%end%>
 		<%if @puzzle[@j,i] == '.'%>
