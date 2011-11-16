@@ -2,10 +2,10 @@
 <table class=<%="cells".concat(@j.to_s)%>>
 	<% 9.times do |i| %>
 	<% if i%3 == 0 %><tr><%end%>
-		<%if @puzzle[@j,i] == '.'%>
+		<%if @puzzle.cells[@j][i] == '.'%>
 			<td><input type="text"></input></td>
 		<% else %>
-			<td><%= @puzzle[@j,i] %></td>
+			<td><%= @puzzle.cells[@j][i] %></td>
 		<% end %>
 	<% if i%3 == 2 %></tr><%end%>
 	<%end%>

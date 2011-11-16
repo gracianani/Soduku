@@ -12,11 +12,17 @@
 
 ActiveRecord::Schema.define(:version => 20111108073144) do
 
-  create_table "puzzle_cells", :force => true do |t|
-    t.string "name"
+  create_table "cells", :force => true do |t|
+    t.integer  "puzzle_id"
+    t.string   "cell_value"
+    t.integer  "cell_index"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "puzzles", :force => true do |t|
+    t.string   "name"
+    t.integer  "difficuty_level"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

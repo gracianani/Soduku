@@ -4,6 +4,7 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-puzzle: 
-  cells: "134729658 278431569 521387496 134729658 278431569 521387496 134729658 278431569 521387496"
-
+pz:
+  name: 'puzzle a'
+  difficuty_level: 1
+  
