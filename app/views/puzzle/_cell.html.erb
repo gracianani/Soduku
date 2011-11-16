@@ -1,12 +1,12 @@
 
-<table class=<%="cells".concat(@j.to_s)%>>
+<div class="cells" id=<%="cells".concat(@j.to_s)%>>
 	<% 9.times do |i| %>
-	<% if i%3 == 0 %><tr><%end%>
+
 		<%if @puzzle.cells[@j][i] == '.'%>
-			<td><input type="text"></input></td>
+			<div class="unknown cell"><input type="text"></input></div>
 		<% else %>
-			<td><%= @puzzle.cells[@j][i] %></td>
+			<div class="fix cell"><%= @puzzle.cells[@j][i] %></div>
 		<% end %>
-	<% if i%3 == 2 %></tr><%end%>
+
 	<%end%>
-</table>
+</div>

@@ -4,6 +4,7 @@
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here|Over+the+Rainbow|Delius+Unicase);
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -133,6 +134,7 @@ a:hover,a:focus,a:active {color:#006668;}
   height:70px;
   padding-top:15px;
   border-right:1px dashed #878787;
+  color:#000;
   
 }
 #menu-blog span,#menu-contact span,#menu-home span,#menu-work span {
@@ -155,7 +157,8 @@ a:hover,a:focus,a:active {color:#006668;}
 
 #soduku-description {
   position:relative;
-  padding:80px 20px 20px 250px;
+  padding:60px 40px 20px 350px;
+  margin-top:20px;
   height:110px;
   background:url(../images/dot.png) repeat-x left bottom;
   text-align:left;
@@ -177,8 +180,15 @@ a:hover,a:focus,a:active {color:#006668;}
   top:0;
 }
 
-
-
+#share-buttons {
+  position:absolute;
+  right:0;
+  top:25px;
+}
+#puzzle-container {
+  padding:20px 0;
+  position:relative;
+}
 #avatar {
   background-image: url('seemeloo-racoon.png');
   width:300px;
@@ -186,37 +196,58 @@ a:hover,a:focus,a:active {color:#006668;}
 }
 
 #hint {
-  float:left;
+  position:absolute;
+  left:0;
+  top:0;
 }
 #talks {
   background-image: url('bubble_thought_s.gif');
   width:200px;
   height:100px;
-  font-family: 'Georgia';
-  font-size:12px;
+  font-size:18px;
   line-height:18px;
   padding-top: 50px;
   text-align: center;
+  
 }
 #puzzle {
 	
-  width: 600px;
-  margin : 20px 0px;
-  float: right;
-  table {
-    margin: 1em;
+  width: 363px;
+  margin : 20px auto;
+  border:2px solid #000;
+  overflow:hidden;
+}
+.cells {
+    
     text-align:center;
     float:left;
-    border:2px solid blue;
+    display:inline-block;
+    border:1px solid #000;
     width: 120px;
     height:120px;
-    td {
-      width : 30px;
-      height: 30px;
-      padding: 5px;
-      input {
-        width :30px;
-      }
-    }
+    border:1px solid #000;
+    margin:-1px 0 0 -1px;
+}
+.fix {
+  width:30px;
+  height:30px;
+  padding:5px;
+}
+.unknown {
+  width:40px;
+  height:40px;
+  input {
+        width :38px;
+        height:38px;
+        border:1px dotted #878787;
   }
+}
+.cell {
+
+      line-height:30px;
+      float:left;
+      display:inline-block;
+      font-family:'Over the Rainbow';
+      font-size:18px;
+
 }
