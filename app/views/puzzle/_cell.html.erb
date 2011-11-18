@@ -1,12 +1,17 @@
 
 <div class="cells" id=<%="cells".concat(@j.to_s)%>>
 	<% 9.times do |i| %>
-
+		<% 
+		column = @j % 3 * 3 + i % 3
+		row = @j / 3 * 3 +  i / 3
+		cellid = 'cell-'+ row.to_s + '-' + column.to_s 
+		%>
 		<%if @puzzle.cells[@j][i] == '.'%>
-			<div class="unknown cell"><input type="text"></input></div>
+			<div class="unknown cell row-<%= row %> column-<%= column %>" id="<%= cellid %>"></div>
 		<% else %>
-			<div class="fix cell"><%= @puzzle.cells[@j][i] %></div>
+			<div class="fix cell row-<%= row %> column-<%= column %>" id="<%= cellid %>"><%= @puzzle.cells[@j][i] %></div>
 		<% end %>
 
 	<%end%>
+
 </div>

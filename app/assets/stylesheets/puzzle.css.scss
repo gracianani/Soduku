@@ -4,7 +4,7 @@
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
-@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here|Over+the+Rainbow|Delius+Unicase);
+@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here);
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -106,7 +106,7 @@ html,body,#container,#header,#top-nav {
   display:inline;
 }
 body {
-  background:url(../images/mainbg.jpg);
+  background:url(mainbg.jpg);
   font-family:Georgia, "Times New Roman", Times, serif;
   font-size:14px;
 }
@@ -114,12 +114,24 @@ a { color:#b62b21; text-decoration:none; }
 a:hover,a:focus,a:active {color:#006668;}
 
 #top-nav {
-  background:url(../images/topnavbg.png) repeat-x;
+  background:url(topnavbg.png) repeat-x;
   height:36px;
 }
 #subscribe {
-  padding:5px 20px;
+  padding:8px 20px;
   float:right;
+}
+#subscribe-ipt {
+  background:url(mainbg.jpg);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border:none;
+  padding:3px 1px 3px 3px;
+  margin-right:5px;
+  font-family:Georgia, "Times New Roman", Times, serif;
+  color:#9a9485;
+  width:150px;
 }
 #menu {
   border-left:1px dashed #878787;
@@ -138,7 +150,7 @@ a:hover,a:focus,a:active {color:#006668;}
   
 }
 #menu-blog span,#menu-contact span,#menu-home span,#menu-work span {
-  background:url(../images/menuicons.png) no-repeat left top;
+  background:url(menuicons.png) no-repeat left top;
   display:block;
   width:40px;
   padding-top:40px;
@@ -160,7 +172,7 @@ a:hover,a:focus,a:active {color:#006668;}
   padding:60px 40px 20px 350px;
   margin-top:20px;
   height:110px;
-  background:url(../images/dot.png) repeat-x left bottom;
+  background:url(dot.png) repeat-x left bottom;
   text-align:left;
   font-size:20px;
   line-height:1.5em;
@@ -171,7 +183,7 @@ a:hover,a:focus,a:active {color:#006668;}
   z-index: 100;
 }
 #soduku-title {
-  background:url(../images/sodukutitle.png) no-repeat left top;
+  background:url(sodukutitle.png) no-repeat left top;
   height:201px;
   width:502px;
   text-indent:-9999px;
@@ -188,10 +200,13 @@ a:hover,a:focus,a:active {color:#006668;}
 #puzzle-container {
   padding:20px 0;
   position:relative;
+  display:none;
 }
 #avatar {
-  background-image: url('seemeloo-racoon.png');
-  width:300px;
+  background:url(seemeloo-racoon.png) no-repeat left top;
+  position:relative;
+  left:180px;
+  width:250px;
   height:300px;
 }
 
@@ -201,53 +216,101 @@ a:hover,a:focus,a:active {color:#006668;}
   top:0;
 }
 #talks {
-  background-image: url('bubble_thought_s.gif');
   width:200px;
   height:100px;
-  font-size:18px;
-  line-height:18px;
   padding-top: 50px;
   text-align: center;
+  font-family:'Just Me Again Down Here';
+  font-size:28px;
+  line-height:1.2em;
+  position:relative;
+  left:80px;
+  top:30px;
   
 }
 #puzzle {
 	
-  width: 363px;
+  width: 372px;
   margin : 20px auto;
-  border:2px solid #000;
-  overflow:hidden;
+  border-style:solid;
+  border-width:2px 0 0 2px;
+  border-color:#000;
+  position:relative;
+  background:url(mainbg.jpg);
+  
+}
+.cell,.cells,.num-eraser{
+    border-style:solid;
+    border-width:0 1px 1px 0;
+    border-color:#000;
 }
 .cells {
     
     text-align:center;
     float:left;
     display:inline-block;
-    border:1px solid #000;
-    width: 120px;
-    height:120px;
-    border:1px solid #000;
-    margin:-1px 0 0 -1px;
-}
-.fix {
-  width:30px;
-  height:30px;
-  padding:5px;
-}
-.unknown {
-  width:40px;
-  height:40px;
-  input {
-        width :38px;
-        height:38px;
-        border:1px dotted #878787;
-  }
+
+    width: 123px;
+    height:123px;
 }
 .cell {
-
-      line-height:30px;
-      float:left;
-      display:inline-block;
-      font-family:'Over the Rainbow';
-      font-size:18px;
+    width:30px;
+    height:30px;
+    padding:5px;
+    line-height:30px;
+    float:left;
+    display:inline-block;
+    font-size:20px;
+}
+.fix {
+  text-shadow:1px 1px 1px #FFF;
+}
+.unknown {
+  background:#FFF;
+  cursor:pointer;
+  font-family:'Just Me Again Down Here';
+  font-size:28px;
 
 }
+
+.errorCell {
+  color:#C00;
+}
+.relativeCells {
+  background:url(currentcellbg.png);
+}
+#numSelector {
+  border-style:solid;
+  border-width:1px 0 0 1px;
+  border-color:#000;
+    
+  width:123px;
+  background:url(mainbg.jpg);
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:100;
+  display:none;
+
+  -moz-box-shadow: 1px 1px 5px #322f27;
+  -webkit-box-shadow: 1px 1px 5px #322f27;
+  box-shadow: 1px 1px 5px #322f27;
+}
+.num-cell,.num-eraser {
+  cursor:pointer;
+}
+.num-cell {
+  font-family:'Just Me Again Down Here';
+  font-size:24px;
+}
+.num-eraser {
+  padding:5px 0;
+  height:25px;
+  line-height:25px;
+  width:122px;
+  float:left;
+}
+.num-cell:hover,.num-eraser:hover {
+  background:url(currentcellbg.png) repeat-x left -40px;
+}
+

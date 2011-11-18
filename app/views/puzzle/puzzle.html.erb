@@ -3,7 +3,7 @@
 <div id="container">
 	<div id="top-nav">
 		<div id="subscribe">
-			<input id="subscribe-ipt" />
+			<input id="subscribe-ipt" value="Enter your email here"/>
 			<a id="subscribe-link" href="#">Subscribe</a>
 		</div>
 	</div><!--#top-nav-->
@@ -31,19 +31,25 @@
 		
 		<div id="puzzle-container">
 			
-			<div id="puzzle">
-			<%9.times do |i| @j = i %>
-				<%= render :partial => 'puzzle/cell' %>	
-				<% if @j%3 == 2 %> 
-					<div style="clear:both"></div>
-				<% end %>
-			<%end%>
-			</div>
-			
 			<div id="hint">
 				<div id="talks">
 				</div>
 				<div id="avatar">
+				</div>
+			</div>
+						
+			<div id="puzzle">
+				<%9.times do |i| @j = i %>
+					<%= render :partial => 'puzzle/cell' %>	
+					<% if 2 == @j % 3 %> 
+						<div class="clear"></div>
+					<% end %>
+				<%end%>
+				<div id="numSelector">
+					<%9.times do |i| %>
+						<div class="cell num-cell"><%= i + 1 %></div>
+					<%end%>
+					<div class="num-eraser">x Clear Number</div>
 				</div>
 			</div>
 			

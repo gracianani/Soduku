@@ -4,21 +4,69 @@
 
 numbers = ['0','1','2','3','4','5','6','7','8','9']
 jQuery ->
-	$('input').blur -> 
-		if ! ( $(this).val() in numbers or $(this).val() is '')		
-			$(this).css( 'color', 'red') 
-			$('#talks').html('it is not a number') 
-		else
-				
-			
-			current_cell = $(this).parentsUntil('tr', 'td')
-			current_table = current_cell.parentsUntil('#puzzle', 'table')
-			
-			$.ajax {
-				url: '/puzzle/cell', 
-				type: 'POST',
-				dataType: 'html',
-				data: { table_index:$('#puzzle table').index(current_table), cell_index:current_table.find('td').index(current_cell), value: $(this).val()}
-				success: (msg) -> 
-					$('#talks').html(msg)
-					}
+  $(document).ready ->
+    $('#puzzle-container').fadeIn(2000)
+    
+    numSelector = $('#numSelector')
+    talk = $('#talks')
+    
+    numSelector.mouseout ->
+      $(this).hide();
+      
+    numSelector.mouseover ->
+      $(this).show();
+          
+    $('.unknown').click ->
+      cell = $(this)
+      size = 41
+      cellid = cell.attr('id').split('-')
+      top = size * parseInt(cellid[1])
+      left = size * parseInt(cellid[2])
+      relativeclass = '.row-' + cellid[1] + ', .column-' + cellid[2]
+      
+      $('.relativeCells').removeClass('relativeCells')
+      $(relativeclass).addClass('relativeCells')
+        
+      $('.currentCell').removeClass('currentCell')
+      cell.addClass('currentCell')
+    
+      numSelector.css('left', left).css('top', top).fadeIn('fast');
+      
+    $('.num-eraser').click ->
+      $('.currentCell').html('')
+      numSelector.hide()
+      talk.html('')
+        
+    $('.num-cell').click ->
+      cell = $(this)
+      currentcell = $('.currentCell')
+      currentcell.html(cell.html())
+      cellvalue = parseInt(cell.html())
+      
+      numSelector.hide()
+  
+      if ( NaN == cellvalue )
+        talk.html("not a number")
+        
+      cellid = currentcell.attr('id').split('-')
+      row = parseInt(cellid[1])
+      column = parseInt(cellid[2])
+      
+      tableindex = Math.floor( row / 3 ) * 3 + Math.floor( column / 3)
+      cellindex = row % 3 * 3 + column % 3
+      $.ajax {
+    		url: '/puzzle/cell', 
+    		type: 'POST',
+    		dataType: 'html',
+    		data: { table_index:tableindex, cell_index:cellindex, value: cellvalue }
+    		success: (msg) -> 
+    			talk.html(msg)
+    			if '"Good Move!"' == msg
+    			  $('.currentCell').removeClass('errorCell')
+    			else
+    			  $('.currentCell').addClass('errorCell')
+    	}
+    	
+  	
+
+      
