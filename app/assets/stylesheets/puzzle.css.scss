@@ -4,7 +4,7 @@
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
-@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -97,13 +97,10 @@ html,body,#container,#header,#top-nav {
 #logo {
   margin-top:-36px;
   padding:10px 90px 0 0;
+  float:left;
 }
 #menu {
   margin-top:20px;
-}
-#logo,#menu {
-  float:left;
-  display:inline;
 }
 body {
   background:url(mainbg.jpg);
@@ -115,26 +112,28 @@ a:hover,a:focus,a:active {color:#006668;}
 
 #top-nav {
   background:url(topnavbg.png) repeat-x;
-  height:36px;
+  padding:8px 0;
 }
 #subscribe {
-  padding:8px 20px;
+  padding:0 20px;
   float:right;
 }
 #subscribe-ipt {
   background:url(mainbg.jpg);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   border:none;
   padding:3px 1px 3px 3px;
-  margin-right:5px;
+  margin-right:8px;
+  height:20px;
   font-family:Georgia, "Times New Roman", Times, serif;
   color:#9a9485;
   width:150px;
 }
 #menu {
   border-left:1px dashed #878787;
+  float:right;
 }
 #menu li {
   float:left;
@@ -202,6 +201,18 @@ a:hover,a:focus,a:active {color:#006668;}
   position:relative;
   display:none;
 }
+#powerBy {
+  position:absolute;
+  right:60px;
+  bottom:20px;
+  text-align:left;
+  background:url(powerby.png) no-repeat;
+  width:200px;
+  padding-top:8px;
+  font-family:'Indie Flower';
+  font-size:16px;
+  line-height:27px;
+}
 #avatar {
   background:url(seemeloo-racoon.png) no-repeat left top;
   position:relative;
@@ -216,17 +227,20 @@ a:hover,a:focus,a:active {color:#006668;}
   top:0;
 }
 #talks {
-  width:200px;
+  width:160px;
   height:100px;
-  padding-top: 50px;
+  padding: 40px 30px;
+  margin-bottom:-35px;
   text-align: center;
-  font-family:'Just Me Again Down Here';
-  font-size:28px;
-  line-height:1.2em;
+  font-family:'Indie Flower';
+  font-size:24px;
+  line-height:1.1em;
   position:relative;
-  left:80px;
+  left:60px;
   top:30px;
-  
+}
+.talking {
+    background:url(bubble.png) no-repeat;
 }
 #puzzle {
 	
@@ -268,7 +282,7 @@ a:hover,a:focus,a:active {color:#006668;}
 .unknown {
   background:#FFF;
   cursor:pointer;
-  font-family:'Just Me Again Down Here';
+  font-family:'Indie Flower';
   font-size:28px;
 
 }
@@ -300,7 +314,7 @@ a:hover,a:focus,a:active {color:#006668;}
   cursor:pointer;
 }
 .num-cell {
-  font-family:'Just Me Again Down Here';
+  font-family:'Indie Flower';
   font-size:24px;
 }
 .num-eraser {
@@ -313,4 +327,41 @@ a:hover,a:focus,a:active {color:#006668;}
 .num-cell:hover,.num-eraser:hover {
   background:url(currentcellbg.png) repeat-x left -40px;
 }
-
+#footer {
+  background:url(topnavbg.png);
+  padding-bottom:20px;
+}
+#footer-top {
+  background:url(footer-top.png) repeat-x;
+  height:24px;
+}
+#footer-container {
+  background:url(footer-btm.png) left bottom repeat-x;
+  text-align:center;
+}
+#footer-warpper {
+  width:1000px;
+  margin:0 auto;
+  padding:20px 0;
+  text-shadow:1px 1px 0 #000;
+  color:#d8caa2;
+}
+#footer-logo {
+  float:left;
+  display:inline;
+  padding:5px 30px 0 0;
+  p{
+    font-size:16px;
+    padding:10px 0;
+  }
+}
+#whatWeCanDo {
+  float:left;
+  display:inline;
+  list-style:disc inside;
+  text-align:left;
+  line-height:1.8em;
+}
+#whatWeCanDo em {
+  color:#cc0000;
+}

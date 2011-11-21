@@ -3,6 +3,11 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 numbers = ['0','1','2','3','4','5','6','7','8','9']
+RES_GOOD = 0
+RES_ERROR = 1
+MSG_GOOD = 'Good Move!'
+MSG_ERROR = 'I don\'t think it\'ll work!'
+
 jQuery ->
   $(document).ready ->
     $('#puzzle-container').fadeIn(2000)
@@ -35,14 +40,14 @@ jQuery ->
     $('.num-eraser').click ->
       $('.currentCell').html('')
       numSelector.hide()
-      talk.html('')
+      talk.html('').removeClass('talking')
         
     $('.num-cell').click ->
       cell = $(this)
       currentcell = $('.currentCell')
       currentcell.html(cell.html())
       cellvalue = parseInt(cell.html())
-      
+      talk.addClass('talking').html('...')
       numSelector.hide()
   
       if ( NaN == cellvalue )
@@ -60,11 +65,12 @@ jQuery ->
     		dataType: 'html',
     		data: { table_index:tableindex, cell_index:cellindex, value: cellvalue }
     		success: (msg) -> 
-    			talk.html(msg)
-    			if '"Good Move!"' == msg
+    			if RES_GOOD == parseInt(msg)
+    			  talk.html(MSG_GOOD)
     			  $('.currentCell').removeClass('errorCell')
     			else
     			  $('.currentCell').addClass('errorCell')
+    			  talk.html(MSG_ERROR)
     	}
     	
   	

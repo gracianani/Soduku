@@ -15,9 +15,9 @@ class PuzzleController < ApplicationController
     result = ''
     if  (!cell.include? value ) && (!puzzle.rowdigits(row).include? value) && (!puzzle.coldigits(col).include? value)
       cell[cell_index] = value.to_s
-      result = 'Good Move!'
+      result = 0
     else 
-      result = 'I don''t think it will work'
+      result = 1
     end
  
     respond_to do |format|
