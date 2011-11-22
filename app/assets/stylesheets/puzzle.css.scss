@@ -94,10 +94,14 @@ html,body,#container,#header,#top-nav {
   width:1000px;
   margin:0 auto;
 }
+#header {
+  position:relative;
+
+}
 #logo {
-  margin-top:-36px;
-  padding:10px 90px 0 0;
-  float:left;
+  position:absolute;
+  top:-35px;
+  left:0;
 }
 #menu {
   margin-top:20px;
@@ -113,6 +117,7 @@ a:hover,a:focus,a:active {color:#006668;}
 #top-nav {
   background:url(topnavbg.png) repeat-x;
   padding:8px 0;
+  height:24px;
 }
 #subscribe {
   padding:0 20px;
@@ -168,13 +173,13 @@ a:hover,a:focus,a:active {color:#006668;}
 
 #soduku-description {
   position:relative;
-  padding:60px 40px 20px 350px;
+  padding:80px 60px 20px 380px;
   margin-top:20px;
   height:110px;
   background:url(dot.png) repeat-x left bottom;
   text-align:left;
   font-size:20px;
-  line-height:1.5em;
+  line-height:1.6em;
   text-shadow:1px 1px 1px #FFF;
 }
 #soduku-description p{
@@ -187,14 +192,14 @@ a:hover,a:focus,a:active {color:#006668;}
   width:502px;
   text-indent:-9999px;
   position: absolute;
-  left:0;
+  left:30px;
   top:0;
 }
 
 #share-buttons {
   position:absolute;
   right:0;
-  top:25px;
+  top:5px;
 }
 #puzzle-container {
   padding:20px 0;
