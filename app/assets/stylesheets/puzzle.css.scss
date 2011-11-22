@@ -4,7 +4,7 @@
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
-@import url(http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -94,16 +94,17 @@ html,body,#container,#header,#top-nav {
   width:1000px;
   margin:0 auto;
 }
+#header {
+  position:relative;
+
+}
 #logo {
-  margin-top:-36px;
-  padding:10px 90px 0 0;
+  position:absolute;
+  top:-35px;
+  left:0;
 }
 #menu {
   margin-top:20px;
-}
-#logo,#menu {
-  float:left;
-  display:inline;
 }
 body {
   background:url(mainbg.jpg);
@@ -115,26 +116,29 @@ a:hover,a:focus,a:active {color:#006668;}
 
 #top-nav {
   background:url(topnavbg.png) repeat-x;
-  height:36px;
+  padding:8px 0;
+  height:24px;
 }
 #subscribe {
-  padding:8px 20px;
+  padding:0 20px;
   float:right;
 }
 #subscribe-ipt {
   background:url(mainbg.jpg);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   border:none;
   padding:3px 1px 3px 3px;
-  margin-right:5px;
+  margin-right:8px;
+  height:20px;
   font-family:Georgia, "Times New Roman", Times, serif;
   color:#9a9485;
   width:150px;
 }
 #menu {
   border-left:1px dashed #878787;
+  float:right;
 }
 #menu li {
   float:left;
@@ -169,13 +173,13 @@ a:hover,a:focus,a:active {color:#006668;}
 
 #soduku-description {
   position:relative;
-  padding:60px 40px 20px 350px;
+  padding:80px 60px 20px 380px;
   margin-top:20px;
   height:110px;
   background:url(dot.png) repeat-x left bottom;
   text-align:left;
   font-size:20px;
-  line-height:1.5em;
+  line-height:1.6em;
   text-shadow:1px 1px 1px #FFF;
 }
 #soduku-description p{
@@ -188,19 +192,31 @@ a:hover,a:focus,a:active {color:#006668;}
   width:502px;
   text-indent:-9999px;
   position: absolute;
-  left:0;
+  left:30px;
   top:0;
 }
 
 #share-buttons {
   position:absolute;
   right:0;
-  top:25px;
+  top:5px;
 }
 #puzzle-container {
   padding:20px 0;
   position:relative;
   display:none;
+}
+#powerBy {
+  position:absolute;
+  right:60px;
+  bottom:20px;
+  text-align:left;
+  background:url(powerby.png) no-repeat;
+  width:200px;
+  padding-top:8px;
+  font-family:'Indie Flower';
+  font-size:16px;
+  line-height:27px;
 }
 #avatar {
   background:url(seemeloo-racoon.png) no-repeat left top;
@@ -216,17 +232,20 @@ a:hover,a:focus,a:active {color:#006668;}
   top:0;
 }
 #talks {
-  width:200px;
+  width:160px;
   height:100px;
-  padding-top: 50px;
+  padding: 40px 30px;
+  margin-bottom:-35px;
   text-align: center;
-  font-family:'Just Me Again Down Here';
-  font-size:28px;
-  line-height:1.2em;
+  font-family:'Indie Flower';
+  font-size:24px;
+  line-height:1.1em;
   position:relative;
-  left:80px;
+  left:60px;
   top:30px;
-  
+}
+.talking {
+    background:url(bubble.png) no-repeat;
 }
 #puzzle {
 	
@@ -268,7 +287,7 @@ a:hover,a:focus,a:active {color:#006668;}
 .unknown {
   background:#FFF;
   cursor:pointer;
-  font-family:'Just Me Again Down Here';
+  font-family:'Indie Flower';
   font-size:28px;
 
 }
@@ -300,7 +319,7 @@ a:hover,a:focus,a:active {color:#006668;}
   cursor:pointer;
 }
 .num-cell {
-  font-family:'Just Me Again Down Here';
+  font-family:'Indie Flower';
   font-size:24px;
 }
 .num-eraser {
@@ -313,4 +332,41 @@ a:hover,a:focus,a:active {color:#006668;}
 .num-cell:hover,.num-eraser:hover {
   background:url(currentcellbg.png) repeat-x left -40px;
 }
-
+#footer {
+  background:url(topnavbg.png);
+  padding-bottom:20px;
+}
+#footer-top {
+  background:url(footer-top.png) repeat-x;
+  height:24px;
+}
+#footer-container {
+  background:url(footer-btm.png) left bottom repeat-x;
+  text-align:center;
+}
+#footer-warpper {
+  width:1000px;
+  margin:0 auto;
+  padding:20px 0;
+  text-shadow:1px 1px 0 #000;
+  color:#d8caa2;
+}
+#footer-logo {
+  float:left;
+  display:inline;
+  padding:5px 30px 0 0;
+  p{
+    font-size:16px;
+    padding:10px 0;
+  }
+}
+#whatWeCanDo {
+  float:left;
+  display:inline;
+  list-style:disc inside;
+  text-align:left;
+  line-height:1.8em;
+}
+#whatWeCanDo em {
+  color:#cc0000;
+}
