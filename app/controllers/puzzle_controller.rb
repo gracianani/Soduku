@@ -4,6 +4,11 @@ class PuzzleController < ApplicationController
     @puzzle = Puzzle.find(1)
   end
   
+  def change_level
+    respond_to do |format|
+      format.html { @puzzle=Puzzle.find(2) ;}
+    end
+  end
   def cell
     cell_index = params[:cell_index].to_i
     table_index = params[:table_index].to_i

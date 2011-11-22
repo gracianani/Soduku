@@ -16,3 +16,15 @@ Cell.create([{ :puzzle_id => puzzle.id, :cell_index=> 0, :cell_value => "6..18..
              { :puzzle_id => puzzle.id, :cell_index=> 6, :cell_value => "..7.1.8.." }, 
              { :puzzle_id => puzzle.id, :cell_index=> 7, :cell_value => "..1...573" }, 
              { :puzzle_id => puzzle.id, :cell_index=> 8, :cell_value => "58..36..1" }])
+             
+puzzle = Puzzle.create :name => "Seemeloo's Sudoku 2", :difficuty_level => 2
+
+Cell.create([{ :puzzle_id => puzzle.id, :cell_index=> 0, :cell_value => "4....7.21" }, 
+             { :puzzle_id => puzzle.id, :cell_index=> 1, :cell_value => ".....43.5" },
+             { :puzzle_id => puzzle.id, :cell_index=> 2, :cell_value => "35.8....." },
+             { :puzzle_id => puzzle.id, :cell_index=> 3, :cell_value => "7....3..." }, 
+             { :puzzle_id => puzzle.id, :cell_index=> 4, :cell_value => "49.....36" }, 
+             { :puzzle_id => puzzle.id, :cell_index=> 5, :cell_value => "...5....7" }, 
+             { :puzzle_id => puzzle.id, :cell_index=> 6, :cell_value => "......78." }, 
+             { :puzzle_id => puzzle.id, :cell_index=> 7, :cell_value => "8.32....." }, 
+             { :puzzle_id => puzzle.id, :cell_index=> 8, :cell_value => "62.7....9" }])
