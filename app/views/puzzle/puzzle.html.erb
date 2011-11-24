@@ -1,0 +1,81 @@
+
+
+<div id="container">
+	<div id="top-nav" class="clearfix">
+	</div><!--#top-nav-->
+	<div id="header" class="clearfix">
+		<div id="logo">
+			<img src="../../images/logo.png" alt="Seemeloo" />
+		</div><!--#logo-->
+	</div><!--#header-->
+	<div id="main">
+		<div id="soduku-description">
+			<h1 id="soduku-title">Sudoku</h1>
+			<p>Every Sudoku has a unique solution that can be reached logically. Enter numbers into the blank spaces so that each row, column and 3x3 box contains the numbers 1 to 9.</p>
+		</div>
+		
+		<div id="puzzle-container">
+			
+			<div id="hint">
+				<div id="talks">
+				</div>
+				<div id="avatar">
+				</div>
+			</div>
+						
+			<div id="puzzle">
+				<div id="cell-container" class="">
+				<%9.times do |i| @j = i %>
+					<%= render :partial => 'puzzle/cell' %>	
+					<% if 2 == @j % 3 %> 
+						<div class="clear"></div>
+					<% end %>
+				<%end%>
+				<div id="numSelector">
+					<%9.times do |i| %>
+						<div class="cell num-cell"><%= i + 1 %></div>
+					<%end%>
+					<div class="num-eraser">x Clear Number</div>
+				</div>
+				</div>
+			</div>
+			
+			<div id="controlPanel">
+				<%= link_to_function 'Start Game', 'clock()', :id => 'start_game'%>
+				<span id="status"></span>
+			</div>
+			
+		</div><!--#puzzle-container> -->
+			<div id="powerBy">
+				<p>Power by</p>
+				<p> Ruby on Rails</p>
+				<p> HTML5 &amp; CSS3</p>
+				<p>jQuery</p>
+			</div>
+		</div><!--#puzzle-container-->
+		<div id="share-buttons">
+				<iframe src="//www.facebook.com/plugins/like.php?href&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=30" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:30px;float:right;" allowTransparency="true"></iframe>
+				<iframe allowtransparency="true" frameborder="0" scrolling="no" src="//platform.twitter.com/widgets/tweet_button.html?count=none&amp;related=seemeloo" style="width:60px; height:30px;padding:0px 5px 0 0;float:right;"></iframe>
+		</div>
+	</div><!--#main-->
+	<div id="footer">
+		<div id="footer-top"></div>
+		<div id="footer-container">
+			<div id="footer-warpper" class="clearfix">
+				<div id="footer-logo">
+					<img src="../../images/footer-logo.jpg" alt="Seemeloo | Love &amp; Passionate" />
+					<p>We Help You Create Wonderful Web Apps</p>
+				</div>
+				<ul id="whatWeCanDo">
+					<li>Website and UI design (<em>CSS3</em> and <em>HTML5</em>)</li>
+					<li>Smart website and UI effects (<em>jQuery</em>)</li>
+					<li>Back-end development (<em>Ruby</em>, ASP, PHP, <em>AJAX</em>...)</li>
+					<li>Customized themes (Wordpress, Magento)</li>
+					<li>API Integration (Twitter, Facebook, <em>Paypal</em>, FedEx...)</li>
+				</ul>
+			</div><!--#footer-warpper-->
+		</div><!--#footer-container-->
+	</div><!--#footer-->
+</div><!--#container-->
+
+
