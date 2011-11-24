@@ -38,10 +38,23 @@ jQuery ->
       numSelector.css('left', left).css('top', top).fadeIn('fast');
       
     $('.num-eraser').click ->
+      currentcell = $('.currentCell')	
       $('.currentCell').html('')
       numSelector.hide()
+      cellid = currentcell.attr('id').split('-')
+      row = parseInt(cellid[1])
+      column = parseInt(cellid[2])
+      
+      tableindex = Math.floor( row / 3 ) * 3 + Math.floor( column / 3)
+      cellindex = row % 3 * 3 + column % 3
       talk.html('').removeClass('talking')
-        
+      $.ajax {
+	      	url: '/puzzle/cell',
+	      	type: 'POST',
+	      	dataType: 'html',
+	      	data: { table_index:tableindex, cell_index:cellindex, value: '.' }
+     	}
+      
     $('.num-cell').click ->
       cell = $(this)
       currentcell = $('.currentCell')

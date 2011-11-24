@@ -28,9 +28,9 @@ class PuzzleController < ApplicationController
     row = table_index/3*3 + cell_index/3
     col = table_index%3*3 + cell_index%3
     
-    if  (!cell.include? value ) && (!puzzle.rowdigits(row).include? value) && (!puzzle.coldigits(col).include? value)
-      cell[cell_index] = value.to_s
-      cell.save!
+    if  (!cell.include? value ) && (!puzzle.rowdigits(row).include? value) && (!puzzle.coldigits(col).include? value) || value == '.'
+      cell.cell_value = String.new(cell.replace(cell_index, value))
+      cell.save
       result = PuzzleResponse.new(table_index, cell_index, 0, cell.cell_value)
     else 
       result = PuzzleResponse.new(table_index, cell_index, 1, cell.cell_value)
