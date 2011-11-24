@@ -25,6 +25,7 @@
 			</div>
 						
 			<div id="puzzle">
+				<div id="cell-container" class="">
 				<%9.times do |i| @j = i %>
 					<%= render :partial => 'puzzle/cell' %>	
 					<% if 2 == @j % 3 %> 
@@ -37,12 +38,12 @@
 					<%end%>
 					<div class="num-eraser">x Clear Number</div>
 				</div>
+				</div>
 			</div>
 			
 			<div id="controlPanel">
-				<div id="level">
-					<a id="btn_change_level" href="#"> Change Level </a>
-				</div>
+				<%= link_to_function 'Start Game', 'clock()', :id => 'start_game'%>
+				<span id="status"></span>
 			</div>
 			
 		</div><!--#puzzle-container> -->

@@ -11,7 +11,7 @@ MSG_ERROR = 'I don\'t think it\'ll work!'
 jQuery ->
   $(document).ready ->
     $('#puzzle-container').fadeIn(2000)
-    
+
     numSelector = $('#numSelector')
     talk = $('#talks')
     
@@ -65,7 +65,9 @@ jQuery ->
     		dataType: 'html',
     		data: { table_index:tableindex, cell_index:cellindex, value: cellvalue }
     		success: (msg) -> 
-    			if RES_GOOD == parseInt(msg)
+    			status = $.parseJSON(msg).status
+
+    			if RES_GOOD == parseInt(status)
     			  talk.html(MSG_GOOD)
     			  $('.currentCell').removeClass('errorCell')
     			else

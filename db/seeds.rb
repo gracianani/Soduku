@@ -5,6 +5,8 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Emanuel', :city => cities.first)
+Puzzle.destroy_all
+
 puzzle = Puzzle.create :name => "Seemeloo's Sudoku", :difficuty_level => 1
 
 Cell.create([{ :puzzle_id => puzzle.id, :cell_index=> 0, :cell_value => "6..18..94" }, 
