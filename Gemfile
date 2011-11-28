@@ -3,9 +3,9 @@ gem 'rake', '0.8.7'
 gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-group :production, :staging do
-  gem "pg"
+# gem 'rails',     :git => 'git://ggemithub.com/rails/rails.git'
+group :production do
+  gem 'pg'
 end
 
 group :development, :test do

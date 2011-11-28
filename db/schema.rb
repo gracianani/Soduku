@@ -10,12 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111108073144) do
+ActiveRecord::Schema.define(:version => 20111127081828) do
 
   create_table "cells", :force => true do |t|
     t.integer  "puzzle_id"
     t.string   "cell_value"
     t.integer  "cell_index"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "puzzle_value_histories", :force => true do |t|
+    t.integer  "puzzle_id"
+    t.integer  "cell_index"
+    t.integer  "value_index"
+    t.string   "value"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

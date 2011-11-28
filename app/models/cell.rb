@@ -7,9 +7,7 @@ class Cell < ActiveRecord::Base
   end
 
   def []= (index, value)
-    new_value = String.new(cell_value)
-    new_value[index.to_i] = value.to_s
-    new_value
+    cell_value[index.to_i] = value.to_s
   end
   
   def replace (index, value)

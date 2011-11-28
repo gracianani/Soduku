@@ -13,6 +13,8 @@ class CreatePuzzles < ActiveRecord::Migration
       t.integer :cell_index
       t.timestamps
     end
+
+    
   end
   
   def self.down

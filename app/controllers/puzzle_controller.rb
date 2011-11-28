@@ -1,10 +1,9 @@
 
 class PuzzleResponse
-  attr_accessor :status, :table_index, :cell_index, :parent_value
+  attr_accessor :status, :table_index, :cell_index
   
-  def initialize(table_index, cell_index, status, parent_value)
+  def initialize(table_index, cell_index, statuse)
     @table_index = table_index
-    @parent_value = parent_value
     @cell_index = cell_index
     @status = status
   end
@@ -31,9 +30,12 @@ class PuzzleController < ApplicationController
     if  (!cell.include? value ) && (!puzzle.rowdigits(row).include? value) && (!puzzle.coldigits(col).include? value) || value == '.'
       cell.cell_value = String.new(cell.replace(cell_index, value))
       cell.save
-      result = PuzzleResponse.new(table_index, cell_index, 0, cell.cell_value)
+      result = PuzzleResponse.new(table_index, cell_index, 0)
+      if !PuzzleValueHistory.where(:puzzle_id => puzzle.id, :cell_index=>table_index, :value_index=> cell_index).exists? 
+        puzzle.puzzleValueHistories.create(:puzzle_id => puzzle.id, :cell_index => table_index, :value_index=> cell_index, :value=> value)
+      end
     else 
-      result = PuzzleResponse.new(table_index, cell_index, 1, cell.cell_value)
+      result = PuzzleResponse.new(table_index, cell_index, 1)
     end
     
  

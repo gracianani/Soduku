@@ -1,6 +1,7 @@
 class Puzzle < ActiveRecord::Base
   
-  has_many :cells 
+  has_many :cells
+  has_many :puzzleValueHistories
   
   def rowdigits(row)
     s = Array.new
@@ -16,9 +17,6 @@ class Puzzle < ActiveRecord::Base
       s << cells[BoxOfIndex[i*9+col]][i%3*3+col%3]
     end
     s
-  end
-  
-  def celldigits(cell)
   end
   
   BoxOfIndex = [
