@@ -113,11 +113,21 @@ body {
 }
 a { color:#b62b21; text-decoration:none; }
 a:hover,a:focus,a:active {color:#006668;}
-
+#contact {
+  text-align:left;
+  width:880px;
+  padding-left:120px;
+  margin:0 auto;
+}
+#contact a {
+  margin-right:20px;
+  display:inline-block;
+}
 #top-nav {
   background:url(topnavbg.png) repeat-x;
   padding:8px 0;
   height:24px;
+  line-height:24px;
 }
 #subscribe {
   padding:0 20px;
@@ -199,7 +209,7 @@ a:hover,a:focus,a:active {color:#006668;}
 #share-buttons {
   position:absolute;
   right:0;
-  top:5px;
+  top:8px;
 }
 #puzzle-container {
   padding:20px 0;
