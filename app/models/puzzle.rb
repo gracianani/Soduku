@@ -31,4 +31,12 @@ class Puzzle < ActiveRecord::Base
     6,6,6,7,7,7,8,8,8
   ]
   
+  def contains? (cell_index, value_index)
+    puzzleValueHistories.where(:cell_index => cell_index, :value_index => value_index).exists?
+  end
+  
+  def history(cell_index, value_index)
+    history = puzzleValueHistories.where(:cell_index => cell_index, :value_index => value_index).first.value
+  end
+  
 end

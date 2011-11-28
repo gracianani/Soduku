@@ -4,7 +4,7 @@ class PuzzleValueHistory < ActiveRecord::Base
     value
   end
   
-  def [] (cell_index, value_index, value)
+  def []= (cell_index, value_index, value)
     this.value = value
   end
 end

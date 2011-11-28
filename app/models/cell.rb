@@ -17,6 +17,7 @@ class Cell < ActiveRecord::Base
   end
   
   def include? (value)
-    cell_value.include? value.to_s
+    #puts puzzle.object_id
+    (cell_value.include? value.to_s) || (PuzzleValueHistory.where(:puzzle_id=> puzzle_id, :cell_index => cell_index, :value=> value.to_s).exists?)
   end
 end

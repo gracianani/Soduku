@@ -2,7 +2,7 @@
 class PuzzleResponse
   attr_accessor :status, :table_index, :cell_index
   
-  def initialize(table_index, cell_index, statuse)
+  def initialize(table_index, cell_index, status)
     @table_index = table_index
     @cell_index = cell_index
     @status = status
@@ -28,11 +28,19 @@ class PuzzleController < ApplicationController
     col = table_index%3*3 + cell_index%3
     
     if  (!cell.include? value ) && (!puzzle.rowdigits(row).include? value) && (!puzzle.coldigits(col).include? value) || value == '.'
-      cell.cell_value = String.new(cell.replace(cell_index, value))
-      cell.save
+      #cell.cell_value = String.new(cell.replace(cell_index, value))
+      #cell.save
       result = PuzzleResponse.new(table_index, cell_index, 0)
-      if !PuzzleValueHistory.where(:puzzle_id => puzzle.id, :cell_index=>table_index, :value_index=> cell_index).exists? 
-        puzzle.puzzleValueHistories.create(:puzzle_id => puzzle.id, :cell_index => table_index, :value_index=> cell_index, :value=> value)
+      puts value
+      if value == '.'
+        PuzzleValueHistory.destroy_all :puzzle_id => puzzle.id, :cell_index=>table_index, :value_index=> cell_index
+      else
+        if !PuzzleValueHistory.where(:puzzle_id => puzzle.id, :cell_index=>table_index, :value_index=> cell_index).exists? 
+            PuzzleValueHistory.create(:puzzle_id => puzzle.id, :cell_index => table_index, :value_index=> cell_index, :value=> value) 
+        else
+          history = PuzzleValueHistory.where(:puzzle_id => puzzle.id, :cell_index=>table_index, :value_index=> cell_index).first
+          PuzzleValueHistory.update(history.id, {:value=>value})
+        end
       end
     else 
       result = PuzzleResponse.new(table_index, cell_index, 1)
