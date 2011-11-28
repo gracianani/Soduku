@@ -6,7 +6,11 @@ class Puzzle < ActiveRecord::Base
   def rowdigits(row)
     s = Array.new
     9.times do |i| 
-      s << cells[BoxOfIndex[row*9+i]][i%3+row%3*3]
+      if (puzzleValueHistories.where(:cell_index => BoxOfIndex[row*9+i], :value_index => i%3+row%3*3).exists?)
+        s << puzzleValueHistories.where(:cell_index => BoxOfIndex[row*9+i], :value_index => i%3+row%3*3).first.value
+      else
+        s << cells[BoxOfIndex[row*9+i]][i%3+row%3*3]
+      end
     end
     s
   end
@@ -14,7 +18,11 @@ class Puzzle < ActiveRecord::Base
   def coldigits(col)
     s = Array.new
     9.times do |i| 
-      s << cells[BoxOfIndex[i*9+col]][i%3*3+col%3]
+      if(puzzleValueHistories.where(:cell_index => BoxOfIndex[i*9+col], :value_index => i%3*3+col%3).exists?)
+        s << puzzleValueHistories.where(:cell_index => BoxOfIndex[i*9+col], :value_index => i%3*3+col%3).first.value
+      else
+        s << cells[BoxOfIndex[i*9+col]][i%3*3+col%3]
+      end
     end
     s
   end
